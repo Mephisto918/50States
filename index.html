@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div id="box">
+            <form action="" id="form">
+                <div>
+                    <label for="" id="stateName">State</label>
+                    <input type="text" name="input" id="input">
+                </div>
+                <h2 class="anser"></h2>
+                <button type="submit">Submit</button>
+
+            </form>
+            <button id="choice"></button>
+            <h3 id="streakCon">Streak: <span id="streakPt">0</span></h3>
+        </div>
+    </section>
+<script src="./50states.js"></script>
+<script src="./index.js"></script>
+</body>
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Segoe UI';
+}
+
+:root{
+    --font-color: rgb(153, 153, 153);
+    --border-color: yellow;
+}
+
+body{
+    background-color: black;
+    color: var(--font-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    >section{
+        width: 20rem;
+        aspect-ratio: 1/1;
+        padding: 1rem;
+
+        border: 1px solid var(--border-color);
+        >div{
+            border: 1px solid var(--border-color);
+            background-color: rgba(255, 255, 255, 0.056);
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            >form{
+                display: flex;
+                flex-direction: column;
+                font-size: 1.5rem;
+                gap: 1rem;
+
+                >div{
+                    display: flex;
+                    flex-direction: column;
+
+                    >input{
+                        padding: 0.3rem 0.2rem;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        background-color: rgba(255, 255, 255, 0.138);
+                        border: 1px none transparent;
+                        color: var(--font-color);
+                        border-radius: 4px;
+                        text-indent: 0.3rem;
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                }
+                
+                >button{
+                    all: unset;
+                    border: 1px solid var(--border-color);
+                    text-align: center;
+                    padding: 0.2rem .6rem;
+                    border-radius: 7px;
+                    font-size: 1rem;
+
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 0.178);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+.anser{
+    transition:
+    color 0.5s,
+    background-color 0.5s;
+    height: 4rem;
+}
+#choice{
+    all: unset;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    padding: 0.2rem .6rem;
+    border-radius: 7px;
+    font-size: 1rem;
+
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.178);
+        cursor: pointer;
+    }
+}
+#streakCon{
+    transition:
+    color 0.5s,
+    background-color 0.5s;
+    margin-right: auto;
+    padding: 0.3rem 0.7rem;
+    border-radius: 7px;
+    /* color: var(--font-color); */
+    mix-blend-mode: difference;
+}
+</style>
+</html>
