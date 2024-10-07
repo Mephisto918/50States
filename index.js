@@ -25,6 +25,7 @@ let modes = true;
 toggleModes.addEventListener('click', (e)=>{
     modes = !modes;
     modes ? stateNameOut.textContent = StatesArr[randNumber()] : stateNameOut.textContent = 'Alabama';
+    modes ? toggleModes.textContent = 'Arranged?' : toggleModes.textContent = 'Random?';
     modes ? streakCon.style.display = 'inline' : streakCon.style.display = 'none';
 });
 
